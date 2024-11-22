@@ -889,6 +889,19 @@ txtsprecioservicio.setText("");
 Controlador.ControladorVentas objetoVenta = new Controlador.ControladorVentas();
 objetoVenta.crearFactura(txtSidcliente);
 objetoVenta.realizarVenta(tbresumenventa);
+objetoVenta.limpiarCamposLuegoVenta(
+    txtbuscarcliente,               // buscarCliente
+    txtbuscarproductos,             // buscarProducto
+    txtbuscarservicios,             // buscarServicio
+    tbclientes,                     // tablaCliente
+    tbservicios,                    // tablaServicios
+    tbproductos,                    // tablaProductos
+    txtSidcliente,                  // selectIdCliente
+    txtSnombrecliente,              // selectNombres
+    txtSape,                        // selectApellidos
+    tbresumenventa,                 // tablaResumen
+    lbltotal                        // total
+);
 
 objetoVenta.MostrarUltimaFactura(lblultimafactura);
 // TODO add your handling code here:
