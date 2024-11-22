@@ -444,6 +444,39 @@ public void calcularTotalPagar(JTable tablaResumen, JLabel totalPagar) {
     }
 }
 
+    public void limpiarCamposLuegoVenta(JTextField buscarCliente, JTextField buscarProducto, JTextField buscarServicio, 
+                                    JTable tablaCliente, JTable tablaServicios, JTable tablaProductos, 
+                                    JTextField selectIdCliente, JTextField selectNombres, JTextField selectApellidos, 
+                                    JTable tablaResumen, JLabel total) {
+                                        
+    // Limpiar campos de búsqueda
+    buscarCliente.setText("");
+    buscarCliente.requestFocus();
+    buscarProducto.setText("");
+    buscarServicio.setText("");
+    
+    // Limpiar las tablas de búsqueda
+    DefaultTableModel modeloCliente = (DefaultTableModel) tablaCliente.getModel();
+    modeloCliente.setRowCount(0);
+   
+    DefaultTableModel modeloServicios = (DefaultTableModel) tablaServicios.getModel();
+    modeloServicios.setRowCount(0);
+    
+    DefaultTableModel modeloProductos = (DefaultTableModel) tablaProductos.getModel();
+    modeloProductos.setRowCount(0);
+   
+    // Limpiar selección de cliente
+    selectIdCliente.setText("");
+    selectNombres.setText("");
+    selectApellidos.setText("");
+
+    // Limpiar tabla de resumen de venta
+    DefaultTableModel modeloResumen = (DefaultTableModel) tablaResumen.getModel();
+    modeloResumen.setRowCount(0);
+   
+    // Limpiar total
+    total.setText("0.00");
+}
     
     
     public void MostrarUltimaFactura(JLabel ultimaFactura) {
